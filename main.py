@@ -31,8 +31,6 @@ async def create_wordcloud(body: schemas.wordcloud):
         input={"prompt": f'{body.content}, anime style, anime, '}
     )
 
-    print(output)
-
     return {
         "message": "create image~",
         "url": output[0]
